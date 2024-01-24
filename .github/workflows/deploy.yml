@@ -9,9 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-    REACT_APP_SERVER: ${{ secrets.REACT_APP_SERVER }}
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -29,3 +26,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: npx gh-pages -d build
+
+        env:
+          REACT_APP_SERVER: ${{ secrets.REACT_APP_SERVER }}
