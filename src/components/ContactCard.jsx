@@ -37,10 +37,10 @@ const ContactCard = ({ contact, onOpen, getContactId, deleteContact }) => {
       </Link>
 
       <Flex align="center">
-        <Box mr="4" onClick={() => updateHandler(contact.id)}>
+        <Box  cursor="pointer" mr="4" onClick={() => updateHandler(contact.id)}>
           <FontAwesomeIcon size="2x" icon={faEdit} />
         </Box>
-        <Box color="red.300" onClick={() => deleteContactHandler(contact.id)}>
+        <Box cursor="pointer" color="red.300" onClick={() => deleteContactHandler(contact.id)}>
           <FontAwesomeIcon size="2x" icon={faTrash} />
         </Box>
       </Flex>
