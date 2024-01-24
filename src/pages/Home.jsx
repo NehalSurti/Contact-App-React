@@ -114,7 +114,7 @@ export default function Home() {
         <Flex p="4" justify="center" align="center">
           <Image src={bannner} w="150px" h="100px"></Image>
           <Heading as="h1" textTransform="uppercase">
-            Contact Application
+            Contact App
           </Heading>
         </Flex>
 

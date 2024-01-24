@@ -1,9 +1,10 @@
 import axios from "axios";
+const REACT_APP_SERVER = "https://contact-app-52935-default-rtdb.europe-west1.firebasedatabase.app";
 
 export const addContactOnServer = async (name, email) => {
   try {
     const { data } = await axios.post(
-      `${process.env.REACT_APP_SERVER}/contacts.json`,
+      `${REACT_APP_SERVER}/contacts.json`,
       { name, email }
     );
     return data;
@@ -15,7 +16,7 @@ export const addContactOnServer = async (name, email) => {
 export const getAllContacts = async () => {
   try {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_SERVER}/contacts.json`
+      `${REACT_APP_SERVER}/contacts.json`
     );
     return data;
   } catch (error) {
@@ -26,7 +27,7 @@ export const getAllContacts = async () => {
 export const updateContactOnServer = async (name, email, id) => {
   try {
     const { data } = await axios.patch(
-      `${process.env.REACT_APP_SERVER}/contacts/${id}.json`,
+      `${REACT_APP_SERVER}/contacts/${id}.json`,
       { name, email }
     );
     return data;
@@ -37,7 +38,7 @@ export const updateContactOnServer = async (name, email, id) => {
 export const deleteContactOnServer = async (id) => {
   try {
     const { data } = await axios.delete(
-      `${process.env.REACT_APP_SERVER}/contacts/${id}.json`
+      `${REACT_APP_SERVER}/contacts/${id}.json`
     );
     return data;
   } catch (error) {
@@ -48,7 +49,7 @@ export const deleteContactOnServer = async (id) => {
 export const getContactById = async (id) => {
   try {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_SERVER}/contacts/${id}.json`
+      `${REACT_APP_SERVER}/contacts/${id}.json`
     );
     return data;
   } catch (error) {
